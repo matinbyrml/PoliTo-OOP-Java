@@ -1,0 +1,22 @@
+package it.polito.oop.vaccination;
+
+public class AgeInterval {
+	private int  min;
+	private int max;
+	public AgeInterval(int min, int max) {
+		super();
+		this.min = min;
+		this.max = max;
+	}
+	int getMin() {
+		return min;
+	}
+	int getMax() {
+		return max;
+	}
+	
+	 public String inter(){
+		return "[" +  min +","+ max + "]";
+	}
+	
+}

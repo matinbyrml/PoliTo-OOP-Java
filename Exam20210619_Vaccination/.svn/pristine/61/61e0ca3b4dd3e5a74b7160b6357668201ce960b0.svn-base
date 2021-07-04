@@ -1,0 +1,50 @@
+package it.polito.oop.vaccination;
+
+public class Hub {
+	int nDoctors;
+	int nNurses;
+	int minofhub;
+	int other;
+	private String name;
+
+	public Hub(String name) {
+		super();
+		this.name = name;
+	}
+
+	String getName() {
+		return name;
+	}
+
+	int getnDoctors() {
+		return nDoctors;
+	}
+
+	void setnDoctors(int nDoctors) {
+		this.nDoctors = nDoctors;
+	}
+
+	int getnNurses() {
+		return nNurses;
+	}
+
+	void setnNurses(int nNurses) {
+		this.nNurses = nNurses;
+	}
+
+	int getOther() {
+		return other;
+	}
+
+	void setOther(int other) {
+		this.other = other;
+	}
+	
+	int getminofhub() {
+		minofhub=Integer.min(nDoctors*10, nNurses*12);
+		minofhub=Integer.min(nDoctors*10, other*20);
+		minofhub=Integer.min(other*20, nNurses*12);
+		return minofhub;
+	}
+
+}
